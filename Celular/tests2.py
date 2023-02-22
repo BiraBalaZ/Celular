@@ -35,7 +35,7 @@ assert smartwatch.power_off() == 'Powered off'
 assert smartwatch.is_powered() == False
 
 # Play a game called 'Snake', which consumes 3% of the battery
-assert smartwatch.play_game('Snake') == 'Playing game: Snake'
+assert smartwatch.display_time() == 'ALARM'
 assert smartwatch.get_charge() == 97
 
 # It consumes 1% of the battery
@@ -47,7 +47,7 @@ assert smartwatch.discharge_battery(89) == 'Discharging'
 assert smartwatch.get_charge() == 7
 
 # Play Snake again and the smartwatch turns off because it is below 5%
-assert smartwatch.play_game('Snake') == 'Powering off'
+assert smartwatch.display_time() == 'Powering off'
 assert smartwatch.is_powered() == False
 assert smartwatch.get_charge() == 4
 
